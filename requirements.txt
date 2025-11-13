@@ -1,6 +1,7 @@
-flask
-osmnx
+streamlit
+osmnx==1.9.3
 networkx
 matplotlib
-numpy
-streamlit
+geopandas
+rtree
+shapely
