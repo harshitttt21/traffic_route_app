@@ -28,8 +28,8 @@ if st.button("Generate Routes"):
             data['traffic_time'] = base_time * traffic_factor
             data['traffic_level'] = traffic_factor
 
-        orig = ox.distance.nearest_nodes(G, lon, lat)
-        dest = ox.distance.nearest_nodes(G, lon + 0.01, lat - 0.01)
+        orig = ox.distance.nearest_nodes(G, X=lon, Y=lat)
+        dest = ox.distance.nearest_nodes(G, X=lon + 0.01, Y=lat - 0.01)
 
         if nx.has_path(G, orig, dest):
             shortest_path = nx.shortest_path(G, orig, dest, weight="length")
